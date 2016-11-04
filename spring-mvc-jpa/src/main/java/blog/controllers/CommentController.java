@@ -35,7 +35,7 @@ public class CommentController {
 	@Transactional
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Comment create(@RequestBody @PathVariable Long postId, Comment comment) {
+	public Comment create(@RequestBody Comment comment, @PathVariable Long postId) {
 		Post post = postRepository.findOne(postId);
 		post.addComment(comment);
 		return comment;
