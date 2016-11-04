@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile 'org.postgresql:postgresql:9.4.1211.jre7'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE'
+	compile 'org.springframework.boot:spring-boot-starter-jdbc:1.4.1.RELEASE'
+	compile 'org.slf4j:slf4j-api:1.7.21'
+	
+    testCompile 'junit:junit:4.12'
+}
